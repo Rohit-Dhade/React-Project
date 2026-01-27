@@ -1,0 +1,16 @@
+.dock{
+    
+    position: absolute;
+    bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    // background-color: black;
+    flex-wrap: nowrap;
+
+    .icon{
+        padding: 0.65rem;
+    }
+}
