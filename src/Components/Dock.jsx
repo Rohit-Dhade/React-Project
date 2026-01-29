@@ -2,9 +2,11 @@ import React from "react";
 import "./dock.scss";
 import { useState } from "react";
 import Github from "./Window/Github";
+import Pdf from "./Window/Pdf";
 
 const Dock = () => {
   const [github, setgithub] = useState(false);
+  const [resume, setresume] = useState(false);
   return (
     <>
       <footer className="dock">
@@ -33,7 +35,7 @@ const Dock = () => {
           <span className="tooltip">Spotify</span>
           <img src="/doc-icons/spotify.svg" alt="" />
         </div>
-        <div className="icon pdf">
+        <div onClick={()=>setresume(true)} className="icon pdf">
           <span className="tooltip">Pdf</span>
           <img src="/doc-icons/pdf.svg" alt="" />
         </div>
@@ -65,6 +67,7 @@ const Dock = () => {
       </footer>
 
       {github && <Github onClose={() => setgithub(false)} />}
+      {resume && <Pdf onClose={() => setresume(false)} />}
     </>
   );
 };

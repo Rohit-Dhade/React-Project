@@ -9,7 +9,6 @@ const App = () => {
     <main>
       <Navbar/>
       <Dock/>
-      {/* <Github/> */}
     </main>
   )
 }
