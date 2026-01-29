@@ -2,16 +2,16 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import './window.scss'
 
-const MacWindow = ({children}) => {
+const MacWindow = ({children , func}) => {
   return (
     <Rnd default={{
-      width:"40vw",height:"40vh" , x:300 , y:200
+      width:"40vw",height:"60vh" , x:200 , y:150
     }}>
       <div className="window">
 
         <div className="nav">
             <div className="dots">
-                <div className="dot red"></div>
+                <div onClick={func} className="dot red"></div>
                 <div className="dot yellow"></div>
                 <div className="dot green"></div>
             </div>

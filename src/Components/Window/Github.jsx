@@ -29,9 +29,9 @@ const GitCard = ({
   </div>;
 };
 
-const Github = () => {
+const Github = ({onClose}) => {
   return (
-    <MacWindow>
+    <MacWindow func={onClose}>
       <div className="cards">
         {githubdata.map((projects) => {
             return <GitCard data={projects}/>

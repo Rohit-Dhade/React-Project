@@ -10,7 +10,6 @@
   padding-bottom: 3rem;
   overflow: scroll;
 
-
   .card {
     flex-grow: 1;
     flex-basis: 20rem;
@@ -83,9 +82,22 @@
       text-decoration: none;
       color: white;
     }
+  }
+
+  .urls {
+    max-width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      background-color: rgb(88, 87, 87);
+      color: rgb(180, 173, 173);
+      border-radius: 0.4rem;
+      padding-inline: 0.5rem;
+      padding-block: 0.18rem;
+    }
     a:hover {
-      color: gray;
-      text-decoration: underline;
+      color: black;
     }
   }
 }
