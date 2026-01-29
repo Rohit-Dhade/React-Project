@@ -1,0 +1,91 @@
+.cards {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  scrollbar-width: none;
+  gap: 10px;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  padding-bottom: 3rem;
+  overflow: scroll;
+
+
+  .card {
+    flex-grow: 1;
+    flex-basis: 20rem;
+    border-radius: 1rem;
+    max-width: 25rem;
+    padding-inline: 1rem;
+    padding-block: 0.75rem;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    h1 {
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+
+      font-weight: 500;
+      color: rgb(180, 173, 173);
+      font-size: 1.5rem;
+    }
+    p {
+      word-spacing: 0.2rem;
+    }
+
+    .tags {
+      // border: 2px solid white;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      // justify-content: center;
+      gap: 0.4rem;
+      .tag {
+        background-color: rgb(88, 87, 87);
+        width: fit-content;
+        padding-inline: 0.75rem;
+        padding-block: 0.2rem;
+        border-radius: 1rem;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        white-space: nowrap;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      color: gray;
+      text-decoration: underline;
+    }
+  }
+}
