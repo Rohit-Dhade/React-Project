@@ -3,10 +3,14 @@ import "./dock.scss";
 import { useState } from "react";
 import Github from "./Window/Github";
 import Pdf from "./Window/Pdf";
+import Note from "./Window/Note";
+import Spotify from "./Window/Spotify";
 
 const Dock = () => {
   const [github, setgithub] = useState(false);
   const [resume, setresume] = useState(false);
+  const [note, setnote] = useState(false);
+  const [spotify, setspotify] = useState(false)
   return (
     <>
       <footer className="dock">
@@ -23,7 +27,7 @@ const Dock = () => {
           <span className="tooltip">Link</span>
           <img src="/doc-icons/link.svg" alt="" />
         </div>
-        <div className="icon notes">
+        <div onClick={()=>setnote(true)} className="icon notes">
           <span className="tooltip">Notes</span>
           <img src="/doc-icons/notes.svg" alt="" />
         </div>
@@ -31,7 +35,7 @@ const Dock = () => {
           <span className="tooltip">Mail</span>
           <img src="/doc-icons/mail.svg" alt="" />
         </div>
-        <div className="icon spotify">
+        <div onClick={()=>setspotify(true)} className="icon spotify">
           <span className="tooltip">Spotify</span>
           <img src="/doc-icons/spotify.svg" alt="" />
         </div>
@@ -68,6 +72,8 @@ const Dock = () => {
 
       {github && <Github onClose={() => setgithub(false)} />}
       {resume && <Pdf onClose={() => setresume(false)} />}
+      {note && <Note onClose={() => setnote(false)} />}
+      {spotify && <Spotify onClose={() => setspotify(false)} />}
     </>
   );
 };

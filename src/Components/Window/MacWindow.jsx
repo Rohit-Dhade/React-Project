@@ -2,10 +2,10 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import './window.scss'
 
-const MacWindow = ({children , func}) => {
+const MacWindow = ({children , func , w="40vw",h="60vh"}) => {
   return (
     <Rnd default={{
-      width:"40vw",height:"60vh" , x:200 , y:150
+      width:w,height:h , x:200 , y:150
     }}>
       <div className="window">
 
