@@ -5,12 +5,14 @@ import Github from "./Window/Github";
 import Pdf from "./Window/Pdf";
 import Note from "./Window/Note";
 import Spotify from "./Window/Spotify";
+import Terminal_ from "./Window/Terminal";
 
 const Dock = () => {
   const [github, setgithub] = useState(false);
   const [resume, setresume] = useState(false);
   const [note, setnote] = useState(false);
   const [spotify, setspotify] = useState(false)
+  const [terminal, setterminal] = useState(false)
   return (
     <>
       <footer className="dock">
@@ -56,7 +58,7 @@ const Dock = () => {
           <span className="tooltip">Vs code</span>
           <img src="/doc-icons/vs code.svg" alt="" />
         </div>
-        <div className="icon terminal">
+        <div onClick={()=>setterminal(true)} className="icon terminal">
           <span className="tooltip">Terminal</span>
           <img src="/doc-icons/terminal.svg" alt="" />
         </div>
@@ -73,7 +75,8 @@ const Dock = () => {
       {github && <Github onClose={() => setgithub(false)} />}
       {resume && <Pdf onClose={() => setresume(false)} />}
       {note && <Note onClose={() => setnote(false)} />}
-      {spotify && <Spotify onClose={() => setspotify(false)} />}
+      {terminal && <Terminal_ onClose={() => setterminal(false)} />}
+
     </>
   );
 };
