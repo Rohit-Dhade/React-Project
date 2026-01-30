@@ -4,7 +4,7 @@ import "./sociallinks.scss";
 const SocialLinks = ({ onClose }) => {
   return (
     <div className="social-link">
-      <p onClick={onClose}>something...</p>
+      <img onClick={onClose} id="closeBtn" src="../../../doc-icons/close.svg" alt="" />
 
       <div className="main-box">
         <a

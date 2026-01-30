@@ -34,7 +34,7 @@ const Github = ({onClose}) => {
     <MacWindow func={onClose}>
       <div className="cards">
         {githubdata.map((projects) => {
-            return <GitCard data={projects}/>
+            return <GitCard key={projects.id} data={projects}/>
         })}</div>
     </MacWindow>
   );

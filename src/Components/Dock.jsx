@@ -52,11 +52,11 @@ const Dock = () => {
        
       </footer>
 
-      {windowState.github && <Github onClick={() => { setwindowState(state => ({ ...state, github: false })) }}/>}
-      {windowState.resume && <Pdf onClick={() => { setwindowState(state => ({ ...state, resume: false })) }} />}
-      {windowState.note && <Note onClick={() => { setwindowState(state => ({ ...state, note: false })) }} />}
-      {windowState.terminal && <Terminal_ onClick={() => { setwindowState(state => ({ ...state, terminal: false })) }} />}
-      {windowState.link && <SocialLinks onClick={() => { setwindowState(state => ({ ...state, link: false })) }} />}
+      {windowState.github && (<Github onClose={() => { setwindowState(state => ({ ...state, github: false })) }}/>)}
+      {windowState.resume && <Pdf onClose={() => { setwindowState(state => ({ ...state, resume: false })) }} />}
+      {windowState.note && <Note onClose={() => { setwindowState(state => ({ ...state, note: false })) }} />}
+      {windowState.terminal && <Terminal_ onClose={() => { setwindowState(state => ({ ...state, terminal: false })) }} />}
+      {windowState.link && <SocialLinks onClose={() => { setwindowState(state => ({ ...state, link: false })) }} />}
     </>
   );
 };
