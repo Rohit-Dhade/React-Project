@@ -7,6 +7,7 @@ import Note from "./Window/Note";
 import Spotify from "./Window/Spotify";
 import Terminal_ from "./Window/Terminal";
 import SocialLinks from "./Window/SocialLinks";
+import Mail from "./Window/Mail";
 
 const Dock = () => {
   const [windowState, setwindowState] = useState({
@@ -16,6 +17,7 @@ const Dock = () => {
     spotify:false,
     terminal:false,
     link:false,
+    mail:false,
   })
 
   return (
@@ -27,7 +29,7 @@ const Dock = () => {
         </div>
 
         <div onClick={() => { setwindowState(state => ({ ...state, resume: true })) }} className="icon pdf">
-          <span className="tooltip">Pdf</span>
+          <span className="tooltip">Resume</span>
           <img src="/doc-icons/pdf.svg" alt="" />
         </div>
 
@@ -36,7 +38,7 @@ const Dock = () => {
           <img src="/doc-icons/terminal.svg" alt="" />
         </div>
 
-        <div className="icon mail">
+        <div onClick={() => { setwindowState(state => ({ ...state, mail: true })) }} className="icon mail">
           <span className="tooltip">Mail</span>
           <img src="/doc-icons/mail.svg" alt="" />
         </div>
@@ -57,6 +59,7 @@ const Dock = () => {
       {windowState.note && <Note onClose={() => { setwindowState(state => ({ ...state, note: false })) }} />}
       {windowState.terminal && <Terminal_ onClose={() => { setwindowState(state => ({ ...state, terminal: false })) }} />}
       {windowState.link && <SocialLinks onClose={() => { setwindowState(state => ({ ...state, link: false })) }} />}
+      {windowState.mail && <Mail onClose={() => { setwindowState(state => ({ ...state, mail: false })) }} />}
     </>
   );
 };
